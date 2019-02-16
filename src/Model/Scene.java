@@ -91,17 +91,22 @@ public class Scene {
         System.out.println(testScene1);
 
         Scene testScene2 = new Scene("Scene 2", "2.txt", new ArrayList<Choice>(),
-                "Opening dialogue for scene 2");
+                "You chose Fight!");
         System.out.println("\n" + testScene2);
+
+        Scene testScene3 = new Scene("Scene 3", "3.txt", new ArrayList<Choice>(),
+                "You chose Run!");
+        System.out.println("\n" + testScene3);
 
         // create test choices for testScene1
         Choice c1 = new Choice("Fight", testScene1.getSceneName(), testScene2.getSceneName());
         testScene1.choices.add(c1);
-        Choice c2 = new Choice("run", testScene1.getSceneName(), testScene2.getSceneName());
+        Choice c2 = new Choice("Run", testScene1.getSceneName(), testScene3.getSceneName());
         testScene1.choices.add(c2);
 
         // print
         System.out.println("\n" + testScene1);
         System.out.println("\n" + testScene2);
+        System.out.println("\n" + testScene3);
     }
 }
