@@ -1,11 +1,8 @@
 package Model;
 
-import java.io.File;
 import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Iterator;
-
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -20,6 +17,7 @@ public class Model{
     public Model(String filename){
         this.choices = new HashMap<String, Choice>();
         this.scenes = new HashMap<String, Scene>();
+        this.currentScene = scenes.get("found devil");
         readFile(filename);
     }
 
