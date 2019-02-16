@@ -64,6 +64,13 @@ public class Model{
         }
     }
 
+    public Scene getCurrentScene(){
+        return this.currentScene;
+    }
+
+    public void makeChoice(int choiceNumber){
+    }
+
     public static void main(String[] args){
         Model m = new Model("src/Stories/test.json");
     }

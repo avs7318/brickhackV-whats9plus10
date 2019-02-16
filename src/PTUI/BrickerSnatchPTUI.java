@@ -10,14 +10,15 @@ public class BrickerSnatchPTUI {
 
     public static void main(String[] args){
         String filename;
+        Scanner sc = new Scanner(System.in);
         if(args.length > 0){
             filename = args[0];
         } else{
             System.out.println("Please provide a filename to create a story: ");
-            Scanner sc = new Scanner(System.in);
             filename = sc.nextLine();
         }
         model = new Model(filename);
+
 
     }
 }
