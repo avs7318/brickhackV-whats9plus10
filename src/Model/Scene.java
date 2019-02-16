@@ -92,7 +92,7 @@ public class Scene {
 
         Scene testScene2 = new Scene("Scene 2", "2.txt", new ArrayList<Choice>(),
                 "Opening dialogue for scene 2");
-        System.out.println(testScene2);
+        System.out.println("\n" + testScene2);
 
         // create test choices for testScene1
         Choice c1 = new Choice("Fight", testScene1.getSceneName(), testScene2.getSceneName());
@@ -101,7 +101,7 @@ public class Scene {
         testScene1.choices.add(c2);
 
         // print
-        System.out.println(testScene1);
-        System.out.println(testScene2);
+        System.out.println("\n" + testScene1);
+        System.out.println("\n" + testScene2);
     }
 }
