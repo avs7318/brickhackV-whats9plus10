@@ -2,6 +2,7 @@ package Model;
 
 import java.io.File;
 import java.io.FileReader;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 
@@ -12,12 +13,14 @@ import org.json.simple.parser.JSONParser;
 
 public class Model{
 
-    HashMap<String, Scene> scenes;
-    HashMap<String, Choice> choices;
-    Scene currentScene;
+    private HashMap<String, Scene> scenes;
+    private HashMap<String, Choice> choices;
+    private Scene currentScene;
 
     public Model(String filename){
         this.choices = new HashMap<String, Choice>();
+        this.scenes = new HashMap<String, Scene>();
+        readFile(filename);
     }
 
     public void readFile(String filename){
@@ -36,7 +39,6 @@ public class Model{
                 String choiceCurrentScene = (String) choiceObject.get("current scene");
                 String choiceResultScene = (String) choiceObject.get("result scene");
                 Choice choice = new Choice(choiceText, choiceCurrentScene, choiceResultScene);
-
                 this.choices.put(choiceText, choice);
             }
 
@@ -46,8 +48,15 @@ public class Model{
 
                 String sceneName = (String) sceneObject.get("name");
                 String background = (String) sceneObject.get("background");
-                JSONArray sceneChoices = (JSONArray) sceneObject.get("choices");
-                // Scene scene = new Scene(sceneName, background, )
+                String dialog = (String) sceneObject.get("dialog");
+                ArrayList<Choice> sceneChoices = new ArrayList<Choice>();
+                JSONArray sceneChoiceNames = (JSONArray) sceneObject.get("choices");
+                for(Object sceneChoiceName: sceneChoiceNames){
+                    String choiceName = (String) sceneChoiceName;
+                    sceneChoices.add(this.choices.get(choiceName));
+                }
+                Scene scene = new Scene(sceneName, background, sceneChoices, dialog);
+                this.scenes.put(sceneName, scene);
             }
 
             System.out.println(this.choices);
@@ -59,7 +68,6 @@ public class Model{
 
     public static void main(String[] args){
         Model m = new Model("src/Stories/test.json");
-        m.readFile("src/Stories/test.json");
     }
 
 }

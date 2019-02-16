@@ -20,10 +20,11 @@
     {
       "name": "found devil",
       "background": "devil.png",
-      "options": [
+      "dialog": "Join me or perish",
+      "choices": [
         "fight devil",
         "join devil",
-        "free devil"
+        "flee devil"
       ]
     }
   ]
