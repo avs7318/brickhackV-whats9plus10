@@ -1,25 +1,27 @@
 package Model;
 
+import java.util.ArrayList;
+
 public class Choice {
     //the options the player has to choose from
     private String choice;
 
     //the starting scene for the player
-    private Scene start;
+    private String currentscene;
 
     //the ending scene, that the player goes to after choosing option
-    private Scene end;
+    private String resultscene;
 
     /**
      * This is the constructor for a Choice
      * @param choice (String)
-     * @param start (Scene)
-     * @param end (Scene)
+     * @param currentscene (String)
+     * @param resultscene (String)
      */
-    public Choice(String choice, Scene start, Scene end){
+    public Choice(String choice, String currentscene, String resultscene){
         this.choice = choice;
-        this.start = start;
-        this.end = end;
+        this.currentscene = currentscene;
+        this.resultscene = resultscene;
     }
 
     /**
@@ -34,16 +36,16 @@ public class Choice {
      * This is simply a getter for start
      * @return this.start
      */
-    public Scene getStart(){
-        return this.start;
+    public String getStart(){
+        return this.currentscene;
     }
 
     /**
      * This is simply a getter for end
      * @return this.end
      */
-    public Scene getEnd(){
-        return this.end;
+    public String getEnd(){
+        return this.resultscene;
     }
 
     /**
@@ -53,7 +55,7 @@ public class Choice {
      */
     @Override
     public String toString(){
-       return "Choice{option: " + this.getChoice() + ",\nstartscene: " + start + "\nendscene: " + end ;
+       return "Choice{ option: '" + this.getChoice() + "'\nStartscene: Scene{" + currentscene + "}\nEndscene: Scene{" + resultscene + "} }";
     }
 
     /**
@@ -64,8 +66,16 @@ public class Choice {
      * @param args
      */
     public static void main(String[] args){
-        Choice choice1 = new Choice("Fight?",null,null);
+        ArrayList<Choice> starting = new ArrayList<Choice>();
+        ArrayList<Choice> ending = new ArrayList<Choice>();
+        Scene scene1 = new Scene("Found the devil", "Room", starting, "You fight!");
+        Scene scene2 = new Scene("Run", "Hell", ending, "He stabs you with his pitchfork.");
+        Choice choice1 = new Choice("Flee?", scene1.getSceneName(), scene2.getSceneName());
         System.out.println(choice1.toString());
+        System.out.println();
+        Scene scene3 = new Scene("Fight", "Room", ending, "You behead the devil.");
+        Choice choice2 = new Choice("Fight?", scene1.getSceneName(), scene3.getSceneName());
+        System.out.println(choice2.toString());
     }
 
 }
