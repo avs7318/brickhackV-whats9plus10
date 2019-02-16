@@ -1,0 +1,30 @@
+{
+  "choices": [
+    {
+      "name": "fight devil",
+      "current scene": "found devil",
+      "result scene": "ded"
+    },
+    {
+      "name": "flee devil",
+      "current scene": "found devil",
+      "result scene": "found yoda"
+    },
+    {
+      "name": "join devil",
+      "current scene": "found devil",
+      "result scene": "ded in hell"
+    }
+  ],
+  "scenes": [
+    {
+      "name": "found devil",
+      "background": "devil.png",
+      "options": [
+        "fight devil",
+        "join devil",
+        "free devil"
+      ]
+    }
+  ]
+}
