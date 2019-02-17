@@ -1,3 +1,7 @@
+/*
+ * The BrickerSnatchPTUI class implements the plain text user interface to play the game
+ * @author: Yancarlos Diaz
+ */
 package PTUI;
 import Model.Model;
 import Model.Scene;
@@ -8,8 +12,11 @@ import java.util.Scanner;
 
 public class BrickerSnatchPTUI {
 
-    public static Model model;
-
+    /**
+     * Runs the program. If the user does not provide a json file in the command arguments,
+     * the user will be prompted for a json file to generate a story.
+     * @param args args[0] could contain the file name
+     */
     public static void main(String[] args){
         String filename;
         Scanner sc = new Scanner(System.in);
@@ -19,7 +26,7 @@ public class BrickerSnatchPTUI {
             System.out.println("Please provide a filename to create a story: ");
             filename = sc.nextLine();
         }
-        model = new Model(filename);
+        Model model = new Model(filename);
         Scene scene = model.getCurrentScene();
         while(scene != null){
             System.out.println(scene.getDialogue());
@@ -37,7 +44,5 @@ public class BrickerSnatchPTUI {
             model.makeChoice(userChoice);
             scene = model.getCurrentScene();
         }
-        System.out.println("You ded");
-
     }
 }

@@ -1,3 +1,8 @@
+/*
+ * The BrickerSnatchGUI class implements the graphical user interface to play the game
+ * @author: Alec Mahoney
+ * @author: Yancarlos Diaz
+ */
 package GUI;
 
 import Model.Choice;
@@ -13,38 +18,32 @@ import java.util.ArrayList;
 
 public class BrickerSnatchGUI extends Application {
     private Label dialogue;
-    private Stage stage;
     private static String filename;
     private Model.Model model;
     private Model.Scene currentScene;
-    private VBox boxyBoi;
+    private VBox userOptions;
     private BorderPane layout;
     private String backgroundWidth;
     private String backgroundHeight;
 
-
     /**
-     *
-     * overrides method from Application. Gets choices and scene
-     * ArrayLists from creating a Model. Creates a basic GUI for the
-     * game.
-     * Precondition: user file must use correct json formatting;
+     * Instantiates a model and extracts the current scene.
+     * Creates a basic GUI for the game
+     * Precondition: user file must use correct json formatting
      * @param stage the stage where the scene is placed;
      */
-    @Override
     public void start(Stage stage) {
         this.model = new Model.Model(filename);
         this.currentScene = model.getCurrentScene();
         this.backgroundWidth = model.getImgDimensions().get(0);
         this.backgroundHeight = model.getImgDimensions().get(1);
-        // list of possible choices for the currentScene.
+        // List of possible choices for the currentScene.
         ArrayList<Choice> choices = currentScene.getChoices();
-        // string containing the dialogue to be displayed for the current scene.
+        // String containing the dialogue to be displayed for the current scene.
         String dialogueString = currentScene.getDialogue();
-        // name of the Scene's background image.
+        // Name of the Scene's background image.
         String sceneImage = currentScene.getBackground();
 
-        this.stage = stage;
         layout = new BorderPane();
         // Label containing the dialogueString and its respective formatting.
         dialogue = new Label(dialogueString);
@@ -57,20 +56,11 @@ public class BrickerSnatchGUI extends Application {
         dialogue.setTextAlignment(TextAlignment.CENTER);
         layout.setCenter(dialogue);
 
-        // stores the buttons for each scene
-        boxyBoi = new VBox();
-        for (int i = 0; i < choices.size(); i++) {
-            Choice choice = choices.get(i);
-            Button button = new Button();
-            int index = i;
-            button.setOnMouseClicked(event -> choiceEvent(index));
-            button.setText(choice.getChoice());
-            boxyBoi.getChildren().add(button);
-        }
-        layout.setBottom(boxyBoi);
+        // Stores the buttons for each scene
+        userOptions = new VBox();
+        updateUserChoices(choices);
+        layout.setBottom(userOptions);
 
-        //Image img = new Image("Assets/Alex.jpg");
-        //background = new ImageView(img);
         layout.setMinSize(Integer.parseInt(this.backgroundWidth), Integer.parseInt(this.backgroundHeight));
         String imagePath = "/Assets/" + sceneImage;
         layout.setStyle("-fx-background-image: url(" + imagePath + ");" +
@@ -85,7 +75,7 @@ public class BrickerSnatchGUI extends Application {
     }
 
     /**
-     * the results of interacting with a choice.
+     * Upon selecting a choice, this event is triggered, changing the state of the game.
      * @param choiceId the choice number the user chose.
      */
     public void choiceEvent(int choiceId) {
@@ -101,21 +91,33 @@ public class BrickerSnatchGUI extends Application {
                 "-fx-background-position: center center;" +
                 "-fx-background-size: " + this.backgroundWidth + " " + this.backgroundHeight);
 
-        boxyBoi.getChildren().clear();
+        userOptions.getChildren().clear();
+        updateUserChoices(choices);
+        dialogue.setText(dialogueString);
+    }
+
+    /**
+     * Helper function to update the buttons in the screen given the list of current choices
+     * @param choices the list of current choices
+     */
+    private void updateUserChoices(ArrayList<Choice> choices){
         for (int i = 0; i < choices.size(); i++) {
             Choice choice = choices.get(i);
             Button button = new Button();
             int index = i;
             button.setOnMouseClicked(event -> choiceEvent(index));
             button.setText(choice.getChoice());
-            boxyBoi.getChildren().add(button);
+            userOptions.getChildren().add(button);
         }
-        dialogue.setText(dialogueString);
     }
 
+    /**
+     * Runs the program
+     * @param args args[0] must contain the path to the json file to read
+     */
     public static void main(String[] args) {
         if (args.length < 1) {
-            System.out.println("Bad");
+            System.out.println("Please specify a filename when running this program");
         } else {
             filename = args[0];
             Application.launch(BrickerSnatchGUI.class);
