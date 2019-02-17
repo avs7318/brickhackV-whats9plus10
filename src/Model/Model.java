@@ -79,7 +79,7 @@ public class Model{
     }
 
     public static void main(String[] args){
-        Model m = new Model("src/Stories/test.json");
+        Model m = new Model("src/Stories/LegendOfTheBrick.json");
     }
 
 }
