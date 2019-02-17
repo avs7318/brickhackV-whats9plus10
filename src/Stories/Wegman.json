@@ -1,0 +1,168 @@
+{
+  "choices": [
+    {
+      "name": "You don't need this job! (Leave)",
+      "current scene": "start",
+      "result scene": "death"
+    },
+    {
+      "name": "Go in",
+      "current scene": "start",
+      "result scene": "meet boss"
+    },
+    {
+      "name": "Listen to his speech on Wegmans awesome employee benefits",
+      "current scene": "meet boss",
+      "result scene": "employee benefits"
+    },
+    {
+      "name": "Ask about your duties",
+      "current scene": "meet boss",
+      "result scene": "meet coworkers"
+    },
+    {
+      "name": "Get some healthy and affordable snacks and peace out",
+      "current scene": "meet boss",
+      "result scene": "death"
+    },
+    {
+      "name": "take it easy and peace out early",
+      "current scene": "meet coworkers",
+      "result scene": "death"
+    },
+    {
+      "name": "Talk to your fellow code monkeys",
+      "current scene": "meet coworkers",
+      "result scene": "talk to coworkers"
+    },
+    {
+      "name": "Work Hard",
+      "current scene": "meet coworkers",
+      "result scene": "its late"
+    },
+    {
+      "name": "'How do I log in to my computer?'",
+      "current scene": "talk to coworkers",
+      "result scene": "fanny logs you in"
+    },
+    {
+      "name": "'What's up with George?'",
+      "current scene": "talk with coworkers",
+      "result scene": "weird george"
+    },
+    {
+      "name": "'Nah, I'm good'",
+      "current scene": "talk with coworkers",
+      "result scene": "back to work"
+    },
+    {
+      "name": "Hellll no (Leave)",
+      "current scene": "it's late",
+      "result scene": "death"
+    },
+    {
+      "name": "Investigate",
+      "current scene": "it's late",
+      "result scene": "strange figure"
+    },
+    {
+      "name": "Out.(Run away)",
+      "current scene": "strange figure",
+      "result scene": "front door"
+    },
+    {
+      "name": "'Hello? The store is closed!",
+      "current scene": "strange figure",
+      "result scene": "death"
+    },
+    {
+      "name": "Run to the produce section",
+      "current scene": "front door",
+      "result scene": "banana stranger"
+    },
+    {
+      "name": "Run to the cheese department",
+      "current scene": "front door",
+      "result scene": "cheese stranger"
+    },
+    {
+      "name": "Go to them",
+      "current scene": "banana stranger",
+      "result scene": "fanny chill"
+    },
+    {
+      "name": "Go up to them",
+      "current scene": "cheese stranger",
+      "result scene": "find george"
+    },
+    {
+      "name": "Hide behind the apples!",
+      "current scene": "banana stranger",
+      "result scene": "death"
+    },
+    {
+      "name": "Hide behind the provolone!",
+      "current scene": "cheese stranger",
+      "result scene": "death"
+    },
+    {
+      "name": "Don't go",
+      "current scene": "fanny chill",
+      "result scene": "death"
+    },
+    {
+      "name": "Go with her",
+      "current scene": "fanny chill",
+      "result scene": "waste"
+    },
+    {
+      "name": "Go with him to produce",
+      "current scene": "find george",
+      "result scene": "george attack"
+    },
+    {
+      "name": "Don't trust George, go a different way",
+      "current scene": "find george",
+      "result scene": "death"
+    },
+    {
+      "name": "Something's off with this woman... Run!",
+      "current scene": "waste",
+      "result scene": "death"
+    },
+    {
+      "name": "Remind her that Wegmans is committed to maintaining a zero waste policy so that the food doesn't isn't wasted and instead is given to those that need it most, used in wegmans prepared foods or if they're totally unusable are sent to farmers to feed livestock, anaerobic digestion to be turned into energy, or for composting.",
+      "current scene": "waste",
+      "result scene": "finger snap"
+    },
+    {
+      "name": "'Sorry George!' (Run away)",
+      "current scene": "george attack",
+      "result scene": "end a"
+    },
+    {
+      "name": "Help him!",
+      "current scene": "george attack",
+      "result scene": "death"
+    },
+    {
+      "name": "Talk sense to a banana",
+      "current scene": "finger snap",
+      "result scene": "sad banana"
+    },
+    {
+      "name": "Fight!",
+      "current scene": "finger snap",
+      "result scene": "death"
+    },
+    {
+      "name": "Punch that freak in his freaky face",
+      "current scene": "sad banana",
+      "result scene": "death"
+    },
+    {
+      "name": "Wait and see what happens",
+      "current scene": "sad banana",
+      "result scene": "end 2"
+    }
+    }
