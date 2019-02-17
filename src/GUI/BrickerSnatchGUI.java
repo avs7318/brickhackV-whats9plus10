@@ -72,7 +72,7 @@ public class BrickerSnatchGUI extends Application {
         //Image img = new Image("Assets/Alex.jpg");
         //background = new ImageView(img);
         layout.setMinSize(Integer.parseInt(this.backgroundWidth), Integer.parseInt(this.backgroundHeight));
-        String imagePath = "Assets/" + sceneImage;
+        String imagePath = "/Assets/" + sceneImage;
         layout.setStyle("-fx-background-image: url(" + imagePath + ");" +
                 "-fx-background-position: center center;" +
                 "-fx-background-size: " + this.backgroundWidth + " " + this.backgroundHeight);
