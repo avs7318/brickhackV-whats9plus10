@@ -13,10 +13,12 @@ public class Model{
     private HashMap<String, Scene> scenes;
     private HashMap<String, Choice> choices;
     private Scene currentScene;
+    private ArrayList<String> imgDimensions;
 
     public Model(String filename){
         this.choices = new HashMap<String, Choice>();
         this.scenes = new HashMap<String, Scene>();
+        this.imgDimensions = new ArrayList<>();
         readFile(filename);
         this.currentScene = scenes.get("start");
     }
@@ -57,6 +59,18 @@ public class Model{
                 this.scenes.put(sceneName, scene);
             }
 
+            JSONArray dimensions = (JSONArray) jsonObject.get("image dimensions");
+            JSONObject width = (JSONObject) dimensions.get(0);
+            JSONObject height = (JSONObject) dimensions.get(1);
+
+            String widthString = (String) width.get("width");
+            String heightString = (String) height.get("height");
+
+            imgDimensions.add(widthString);
+            imgDimensions.add(heightString);
+
+
+
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -64,6 +78,10 @@ public class Model{
 
     public Scene getCurrentScene(){
         return this.currentScene;
+    }
+
+    public ArrayList<String> getImgDimensions(){
+        return this.imgDimensions;
     }
 
     public int makeChoice(int choiceNumber){
