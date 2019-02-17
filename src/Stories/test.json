@@ -14,6 +14,26 @@
       "name": "join devil",
       "current scene": "found devil",
       "result scene": "ded in hell"
+    },
+    {
+      "name": "talk to Yoda",
+      "current scene": "found Yoda",
+      "result scene": "talked to Yoda"
+    },
+    {
+      "name": "fight Yoda",
+      "current scene": "found Yoda",
+      "result scene": ""
+    },
+    {
+      "name": "dance off with Elvis",
+      "current scene": "ded in hell",
+      "result scene": "went to heaven"
+    },
+    {
+      "name": "just talk to Elvis",
+      "current scene": "ded in hell",
+      "result scene": "became dance pro"
     }
   ],
   "scenes": [
@@ -26,6 +46,48 @@
         "join devil",
         "flee devil"
       ]
+    },
+    {
+      "name": "ded",
+      "background": "ded.png",
+      "dialog": "You ded",
+      "choices": []
+    },
+    {
+      "name": "ded in hell",
+      "background": "ded.png",
+      "dialog": "You ded in hell, and you find Elvis",
+      "choices": [
+        "dance off with Elvis",
+        "just talk to Elvis"
+      ]
+    },
+    {
+      "name": "found yoda",
+      "background": "yoda.png",
+      "dialog": "You ran away and a green creature called Yoda approaches you.",
+      "choices": [
+        "talk to Yoda",
+        "fight Yoda"
+      ]
+    },
+    {
+      "name": "talked to Yoda",
+      "background": "yoda.png",
+      "dialog": "The ways Yoda teaches you. A god you are.",
+      "choices": []
+    },
+    {
+      "name": "went to heaven",
+      "background": "heaven.png",
+      "dialog": "You were killed in the dance off with Elvis and you died again. Now you in heaven",
+      "choices": []
+    },
+    {
+      "name": "became dance pro",
+      "background": "hell.png",
+      "dialog": "Elvis teaches you the ways. Now you a dance pro. Congrats bru",
+      "choices": []
     }
   ]
 }

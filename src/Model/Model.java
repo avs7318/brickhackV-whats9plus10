@@ -17,8 +17,8 @@ public class Model{
     public Model(String filename){
         this.choices = new HashMap<String, Choice>();
         this.scenes = new HashMap<String, Scene>();
-        this.currentScene = scenes.get("found devil");
         readFile(filename);
+        this.currentScene = scenes.get("start");
     }
 
     public void readFile(String filename){
@@ -56,8 +56,6 @@ public class Model{
                 Scene scene = new Scene(sceneName, background, sceneChoices, dialog);
                 this.scenes.put(sceneName, scene);
             }
-
-            System.out.println(this.choices);
 
         } catch (Exception e) {
             e.printStackTrace();
