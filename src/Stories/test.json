@@ -18,7 +18,7 @@
   ],
   "scenes": [
     {
-      "name": "found devil",
+      "name": "start",
       "background": "devil.png",
       "dialog": "Join me or perish",
       "choices": [
