@@ -17,8 +17,8 @@ public class Model{
     public Model(String filename){
         this.choices = new HashMap<String, Choice>();
         this.scenes = new HashMap<String, Scene>();
-        this.currentScene = scenes.get("found devil");
         readFile(filename);
+        this.currentScene = scenes.get("start");
     }
 
     public void readFile(String filename){
@@ -57,8 +57,6 @@ public class Model{
                 this.scenes.put(sceneName, scene);
             }
 
-            System.out.println(this.choices);
-
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -69,7 +67,7 @@ public class Model{
     }
 
     public int makeChoice(int choiceNumber){
-        if (currentScene.getChoices().size() < choiceNumber) {
+        if (currentScene.getChoices().size() <= choiceNumber) {
             return -1;
         }
         else {
