@@ -69,7 +69,7 @@ public class Model{
     }
 
     public int makeChoice(int choiceNumber){
-        if (currentScene.getChoices().size() < choiceNumber) {
+        if (currentScene.getChoices().size() <= choiceNumber) {
             return -1;
         }
         else {
