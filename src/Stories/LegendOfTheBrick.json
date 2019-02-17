@@ -208,8 +208,7 @@
     "background": "boat.png",
     "dialog": "It turns out the woodpile is actually an overturned rowboat, what do you do?",
     "choices": [
-      "Flip it and put it in the water",
-      "just talk to Elvis"
+      "Flip it and put it in the water"
     ]
     },
     {

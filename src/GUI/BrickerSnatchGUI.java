@@ -2,20 +2,24 @@ package GUI;
 
 import Model.Choice;
 import javafx.application.Application;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.text.Text;
-import javafx.scene.text.TextAlignment;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Rectangle;
+import javafx.scene.text.*;
 import javafx.stage.Stage;
 import javafx.scene.layout.*;
 import java.util.ArrayList;
 
 
+
 public class BrickerSnatchGUI extends Application {
-    private Text dialogue;
+    private Label dialogue;
     private ArrayList<Button> buttonChoices;
     private ImageView background;
     private Stage stage;
@@ -23,6 +27,7 @@ public class BrickerSnatchGUI extends Application {
     private Model.Model model;
     private Model.Scene currentScene;
     private VBox boxyBoi;
+    private BorderPane layout;
 
     @Override
     public void start(Stage stage) throws Exception {
@@ -33,10 +38,14 @@ public class BrickerSnatchGUI extends Application {
         String backgroundName = currentScene.getBackground();
 
         this.stage = stage;
-        BorderPane layout = new BorderPane();
-        dialogue = new Text(dialogueString);
-        dialogue.setStyle("-fx-background-color: red;" +
-                "-fx-min-width: 1200;");
+        layout = new BorderPane();
+        dialogue = new Label(dialogueString);
+        dialogue.setStyle("-fx-min-width: 661;" +
+                "-fx-max-width: 661;" +
+                "-fx-background-color: rgba(255, 255, 255, .7);");
+        dialogue.setFont(Font.font("Verdana", FontWeight.BOLD, 12));
+        dialogue.setWrapText(true);
+        dialogue.setPadding(new Insets(5,10, 5,10));
         dialogue.setTextAlignment(TextAlignment.CENTER);
         layout.setCenter(dialogue);
 
@@ -53,13 +62,15 @@ public class BrickerSnatchGUI extends Application {
 
         //Image img = new Image("Assets/Alex.jpg");
         //background = new ImageView(img);
-        layout.setMinSize(1200, 675);
-        layout.setStyle("-fx-background-image: url(" + "Assets/Alex.jpg" + ");" +
+        layout.setMinSize(661, 551);
+        String imagePath = "Assets/" + backgroundName;
+        layout.setStyle("-fx-background-image: url(" + imagePath + ");" +
                 "-fx-background-position: center center;" +
-                "-fx-background-size: 1200 675");
+                "-fx-background-size: 661 551");
 
         Scene sc = new Scene(layout);
         stage.setScene(sc);
+        stage.setMaxWidth(661);
         stage.setResizable(false);
         stage.show();
     }
@@ -71,6 +82,12 @@ public class BrickerSnatchGUI extends Application {
         ArrayList<Choice> choices = currentScene.getChoices();
         String dialogueString = currentScene.getDialogue();
         String backgroundName = currentScene.getBackground();
+
+        String imagePath = "Assets/" + backgroundName;
+        layout.setStyle("-fx-background-image: url(" + imagePath + ");" +
+                "-fx-background-position: center center;" +
+                "-fx-background-size: 661 551");
+
         boxyBoi.getChildren().clear();
         buttonChoices = new ArrayList<Button>();
         for (int i = 0; i < choices.size(); i++) {
@@ -81,7 +98,6 @@ public class BrickerSnatchGUI extends Application {
             button.setText(choice.getChoice());
             boxyBoi.getChildren().add(button);
         }
-
         dialogue.setText(dialogueString);
     }
 
