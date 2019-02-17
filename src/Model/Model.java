@@ -68,7 +68,16 @@ public class Model{
         return this.currentScene;
     }
 
-    public void makeChoice(int choiceNumber){
+    public int makeChoice(int choiceNumber){
+        if (currentScene.getChoices().size() < choiceNumber) {
+            return -1;
+        }
+        else {
+            Choice choice = this.currentScene.getChoices().get(choiceNumber);
+            String resultString = choice.getEnd();
+            this.currentScene = this.scenes.get(resultString);
+            return 1;
+        }
     }
 
     public static void main(String[] args){
