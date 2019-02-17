@@ -1,0 +1,336 @@
+{
+  "choices": [
+    {
+      "name": "Go to wood pile",
+      "current scene": "start",
+      "result scene": "boat discovery"
+    },
+    {
+      "name": "Search the boulders",
+      "current scene": "start",
+      "result scene": "boulder"
+    },
+    {
+      "name": "Go to cave",
+      "current scene": "start",
+      "result scene": "cave"
+    },
+    {
+      "name": "Grab it and swim",
+      "current scene": "brick",
+      "result scene": "undercave"
+    },
+    {
+      "name": "Land head first",
+      "current scene": "fall",
+      "result scene": "death"
+    },
+    {
+      "name": "Back off",
+      "current scene": "cave",
+      "result scene": "surprise"
+    },
+    {
+      "name": "Flip it and put it in the water",
+      "current scene": "boat discovery",
+      "result scene": "sail off"
+    },
+    {
+      "name": "Fly down",
+      "current scene": "cave",
+      "result scene": "fall"
+    },
+    {
+      "name": "Back away",
+      "current scene": "boulder",
+      "result scene": "start"
+    },
+    {
+      "name": "Inspect",
+      "current scene": "boulder",
+      "result scene": "hobo"
+    },
+    {
+      "name": "Swim down",
+      "current scene": "splash",
+      "result scene": "brick"
+    },
+    {
+      "name": "Swim to surface",
+      "current scene": "splash",
+      "result scene": "toodark"
+    },
+    {
+      "name": "Swim over",
+      "current scene": "undercave",
+      "result scene": "beware"
+    },
+    {
+      "name": "Go over",
+      "current scene": "toodark",
+      "result scene": "black"
+    },
+    {
+      "name": "Run",
+      "current scene": "black",
+      "result scene": "beast"
+    },
+    {
+      "name": "Call out",
+      "current scene": "black",
+      "result scene": "beast2"
+    },
+    {
+      "name": "Walk to cave",
+      "current scene": "black",
+      "result scene": "beast2"
+    },
+    {
+      "name": "Land feet first",
+      "current scene": "fall",
+      "result scene": "splash"
+    },
+    {
+      "name": "Ask who he is",
+      "current scene": "hobo",
+      "result scene": "ask"
+    },
+    {
+      "name": "Ask him to show you the way",
+      "current scene": "ask",
+      "result scene": "show"
+    },
+    {
+      "name": "Look down",
+      "current scene": "show",
+      "result scene": "cave"
+    },
+    {
+      "name": "Walk along the wall",
+      "current scene": "beware",
+      "result scene": "walkalong"
+    },
+    {
+      "name": "Hit your head with the brick",
+      "current scene": "undercave",
+      "result scene": "inevit"
+    },
+    {
+      "name": "Go left",
+      "current scene": "walkalong",
+      "result scene": "left"
+    },
+    {
+      "name": "Go right",
+      "current scene": "walkalong",
+      "result scene": "right"
+    },
+    {
+      "name": "Punch him",
+      "current scene": "hobo",
+      "result scene": "punch"
+    }
+  ],
+  "scenes": [
+    {
+      "name": "start",
+      "background": "island.png",
+      "dialog": "You awake on an unknown island, you have no recollection of the past, not even knowledge of your own name.  The island is small but there is a wood pile, a cluster of large boulders, and a small cave in the sand. What do you do?",
+      "choices": [
+        "Go to wood pile",
+        "Go to cave",
+        "Search the boulders"
+      ]
+    },
+    {
+      "name": "sail off",
+      "background": "sail.png",
+      "dialog": "You get in the boat and row away",
+      "choices": []
+    },
+    {
+      "name": "inevit",
+      "background": "oops.png",
+      "dialog": "You give in to your dark thoughts and repeatedly hit the top of your head with the brick.  You are dead.",
+      "choices": []
+    },
+    {
+      "name": "beast",
+      "background": "beast.png",
+      "dialog": "You begin to sprint into the darkness, blindly running until you run into something immovable and your vision flashes white.\nYou land on your butt and your forehead is filled with immense pain.  You sit up and hear predator-like growling behind you.  Then a piercing pain in the back of your head and all goes black.  You are dead.",
+      "choices": []
+    },
+    {
+      "name": "beast2",
+      "background": "beast.png",
+      "dialog": "You stupidly call out if anyone is there, when suddenly, from the pitch black you see gigantic fangs come into the dim light,\n and as quickly as you saw them, they are wrapped around your head and all goes black.  You are dead.",
+      "choices": []
+    },
+    {
+      "name": "ask",
+      "background": "hobo.png",
+      "dialog": "You ask who he is.  His eyes widen, and his coarse voice shouts in your direction: \n'YOU MUST JUMP IN THE CAVE AND DISCOVER YOUR DESTINY.  RECLAIM BRICK CITY, IT CALLS FOR YOU",
+      "choices": [
+        "Walk to cave",
+        "Punch him",
+        "Ask him to show you the way"
+      ]
+    },
+    {
+    "name": "left",
+    "background": "leftpath.png",
+    "dialog": "You go left.  After about 2 minutes of walking, you reach the end of the cave, and are met with the bright sunny sky.  \nYou step out and see that you are on a different island now, the tunnel must connect islands",
+    "choices": [
+      "Look around the island",
+      "Go to water"
+    ]
+    },
+    {
+      "name": "right",
+      "background": "rightpath.png",
+      "dialog": "You go right.  You hear a screech in the darkness that bounces around the cave walls.  \nYou shiver and keep moving until the ground levels out.  You notice the trail comes to a large puddle.  You realize it's blood. Then you see a human skull a few feet away.  You hear deep, hindered breathing behind you.",
+      "choices": [
+        "Turn around",
+        "Freeze",
+        "Hit your head with the brick"
+      ]
+    },
+
+
+    {
+      "name": "punch",
+      "background": "hobo.png",
+      "dialog": "You lunge forward, madly swinging your fist at his head.  He swiftly dodges and jumps on you.  \nHe begins to bite your hand, and then your shoulder, then neck.  Pain fills your body and your screams echo across the island.  You are dead.",
+      "choices": []
+    },
+    {
+    "name": "boat discovery",
+    "background": "boat.png",
+    "dialog": "It turns out the woodpile is actually an overturned rowboat, what do you do?",
+    "choices": [
+      "Flip it and put it in the water",
+      "just talk to Elvis"
+    ]
+    },
+    {
+      "name": "cave",
+      "background": "cave.png",
+      "dialog": "You approach the cave in the sand, it is extremely steep and dark, but you see a tiny light at the bottom",
+      "choices": [
+        "Fly down",
+        "Back off"
+      ]
+    },
+    {
+      "name": "show",
+      "background": "guide.png",
+      "dialog": "He cackles and rubs his hands together, then leads you over to the deep, sandy hole in the ground.",
+      "choices": [
+        "Look down"
+      ]
+    },
+    {
+    "name": "boulder",
+    "background": "hobo.png",
+    "dialog": "You walk around the large boulders and see something huddled against the a big, gray rock. Inspect?",
+    "choices": [
+      "Back away",
+      "Inspect"
+    ]
+    },
+    {
+      "name": "hobo",
+      "background": "hobo.png",
+      "dialog": "You inspect the animal, it appears to be a thin, dirty man, with a beard as long as his torso.  \nHe spots you and leaps to his feet, thankfully his beard covers everything that'd be undesirable to see",
+      "choices": [
+        "Punch him",
+        "Ask who he is"
+      ]
+    },
+    {
+      "name": "fall",
+      "background": "floor.png",
+      "dialog": "You flail wildly as you fall down the dark abyss, suddenly you see a pool of water below, illuminated by the light from the top of the cave",
+      "choices": [
+        "Land feet first",
+        "Land head first"
+      ]
+    },
+    {
+      "name": "splash",
+      "background": "glow.png",
+      "dialog": "You splash deep into the water, beneath the surface all is dark, but you see a mysterious glow below you",
+      "choices": [
+        "Swim down",
+        "Swim to surface"
+      ]
+    },
+    {
+      "name": "brick",
+      "background": "brick.png",
+      "dialog": "You swim down and see a glowing brick, so bright it almost hurts to see, lying in the cool, dark sand",
+      "choices": [
+        "Grab it and swim",
+        "Swim to surface"
+      ]
+    },
+    {
+      "name": "undercave",
+      "background": "undercave.png",
+      "dialog": "You grasp it, the texture if rough and it is heavy.  The glowing dims slightly and you swim straight up.  \nGasping for air, you reach the surface and in the brick's gentle light, you see a cave entrance on the far wall",
+      "choices": [
+        "Swim over",
+        "Hit your head with the brick"
+      ]
+    },
+    {
+      "name": "black",
+      "background": "black.png",
+      "dialog": "You pull yourself up the ledge and into the darkness, after walking a few steps you hear a loud, \nechoing screech that sends a shiver down your spine",
+      "choices": [
+        "Run",
+        "Call out"
+      ]
+    },
+    {
+      "name": "walkalong",
+      "background": "scary.png",
+      "dialog": "You walk along the cave wall, letting thr brick's light guide you forward.  You come to a fork intersection in the cave.  The left side has an upward slope and what looks like light at the end; the right side has a downward slope into darkness, a dark liquid draws a path on the floor",
+      "choices": [
+        "Go left",
+        "Go right"
+      ]
+    },
+    {
+      "name": "toodark",
+      "background": "black.png",
+      "dialog": "You swim directly to the surface, taking a big gulp of air at the top.  \nUpon peering around you see a dark blob on the wall and realize it must be a way out; it's a cave",
+      "choices": [
+        "Go over"
+      ]
+    },
+    {
+      "name": "surprise",
+      "background": "pow.png",
+      "dialog": "You take a step back when suddenly, you're shoved from behind, and you're sent down the hole",
+      "choices": [
+        "Fly down"
+      ]
+    },
+    {
+      "name": "death",
+      "background": "death.png",
+      "dialog": "You land head first and like landing face first into concrete, you die.",
+      "choices": []
+    },
+    {
+      "name": "beware",
+      "background": "scary.png",
+      "dialog": "You resist the urge to hit yourself with the brick and pull yourself up the ledge and into the cave, \nthe brick gently illuminates the cave walls, showing a damp interior",
+      "choices": [
+        "Walk along the wall"
+
+      ]
+    }
+  ]
+}
