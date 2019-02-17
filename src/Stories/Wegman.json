@@ -219,7 +219,7 @@
       ]
     },
     {
-      "name": "'What's up with George'",
+      "name": "weird george",
       "background": "Wegmans/SnackTable.jpg",
       "dialog": "Fanny and Harris exchange a look. \"He's a real weirdo but harmless. Probably.\" Harris says. \"We gotta get back to work\" Fanny says, as they head back to their desks",
       "choices": [
@@ -338,7 +338,7 @@
     {
       "name": "end 2",
       "background": "/Wegmans/ProduceNight.jpg",
-      "dialog": "The banana goes in for a hug. Your uncomfortable but alive.",
+      "dialog": "The banana goes in for a hug. You're uncomfortable but alive.",
       "choices": []
     }
   ]
