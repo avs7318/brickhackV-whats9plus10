@@ -1,5 +1,8 @@
 {
-  "image dimensions": ["1920", "1080"],
+  "image dimensions": [
+    {"width": "860"},
+    {"height": "540"}
+  ],
   "choices": [
     {
       "name": "You don't need this job! (Leave)",
@@ -165,7 +168,7 @@
   "scenes": [
     {
       "name": "start",
-      "background": "",
+      "background": "src/Assets/Wegmans/Wegmans outside.jpg",
       "dialog": "You pull up to Wegmans for your first day of work there as an app developer.",
       "choices": [
         "You don't need this job! (Leave)",
@@ -174,7 +177,7 @@
     },
     {
       "name": "meet boss",
-      "background": "",
+      "background": "src/Assets/Wegmans/Produce.jpg",
       "dialog": "Your meet your boss Dave who excitedly starts telling you all about working for Wegmans.",
       "choices": [
         "Listen to his Speech on Wegman's awesome benefits",
@@ -183,13 +186,13 @@
     },
     {
       "name": "death",
-      "background": "",
+      "background": "src/Assets/Wegmans/Wegmans outside.jpg",
       "dialog": "Wrong choice, kiddo. You die.",
       "choices": []
     },
     {
       "name": "meet coworkers",
-      "background": "",
+      "background": "src/Assets/Wegmans/Produce.jpg",
       "dialog": "You meet your fellow employees, including a disgruntled cheese guy named George. He gives off bad vibes. You're ushered to the secret back room of the store where their coders work and shown your work station.",
       "choices": [
         "Take it easy and peace out early",
@@ -199,7 +202,7 @@
     },
     {
       "name": "talk to coworkers",
-      "background": "",
+      "background": "rc/Assets/Wegmans/Snack Table.jpg",
       "dialog": "You go to a table stocked with snacks and find Fanny and Harris who tell you how great it is working for Wegmans and ask if you have any questions.",
       "choices": [
         "'How do I log in to my computer?'",
@@ -209,7 +212,7 @@
     },
     {
       "name": "fanny logs you in",
-      "background": "",
+      "background": "rc/Assets/Wegmans/Desk.jpg",
       "dialog": "Fanny shows you how to login. You notice she smells strongly of bananas. She walks away and you being to work",
       "choices": [
         "Work Hard"
@@ -217,7 +220,7 @@
     },
     {
       "name": "'What's up with George'",
-      "background": "",
+      "background": "rc/Assets/Wegmans/Snack Table.jpg",
       "dialog": "Fanny and Harris exchange a look. \"He's a real weirdo but harmless. Probably.\" Harris says. \"We gotta get back to work\" Fanny says, as they head back to their desks",
       "choices": [
         "Work Hard"
@@ -225,7 +228,7 @@
     },
     {
       "name": "back to work",
-      "background": "",
+      "background": "rc/Assets/Wegmans/Desk.jpg",
       "dialog": "You go back to your desk and begin to work",
       "choices": [
         "Work Hard"
@@ -233,7 +236,7 @@
     },
     {
       "name": "its late",
-      "background": "",
+      "background": "rc/Assets/Wegmans/Desk.jpg",
       "dialog": "You realize its gotten late and you're the last person there. You gather your things and head out, as you're about to leave you hear a noise in the produce section",
       "choices": [
         "Hell no (Leave)",
@@ -242,7 +245,7 @@
     },
     {
       "name": "strange figure",
-      "background": "",
+      "background": "rc/Assets/Wegmans/Produce night.jpg",
       "dialog": "You go to the produce section. The lights go out as you see what appears to be a person standing by the bananas.",
       "choices": [
         "Run!",
@@ -251,7 +254,7 @@
     },
     {
       "name": "front door",
-      "background": "",
+      "background": "rc/Assets/Wegmans/Doors.jpg",
       "dialog": "You bolt and see the strange figure heading towards you. You make a run for the front door but find its locked.",
       "choices": [
         "Run to the produce section",
@@ -260,7 +263,7 @@
     },
     {
       "name": "banana stranger",
-      "background": "",
+      "background": "rc/Assets/Wegmans/Produce night.jpg",
       "dialog": "You've never run so fast as you pass displays of healthy fresh fruit. You see someone by the bananas",
       "choices": [
         "Go to them"
@@ -268,7 +271,7 @@
     },
     {
       "name": "cheese stranger",
-      "background": "",
+      "background": "rc/Assets/Wegmans/Cheese night.jpg",
       "dialog": "You've never run so fast as you pass aisles of well priced delicious cheese. You seem to have lost the monster but see someone by the cheese counter.",
       "choices": [
         "Go up to them"
@@ -276,7 +279,7 @@
     },
     {
       "name": "fanny chill",
-      "background": "",
+      "background": "rc/Assets/Wegmans/Produce night.jpg",
       "dialog": "You run up to the person to find it's Fanny. You explain there's a monster in the store and that you both need to leave. She says your just being silly and tells you to come with her.",
       "choices": [
         "Don't go",
@@ -285,7 +288,7 @@
     },
     {
       "name": "find george",
-      "background": "",
+      "background": "rc/Assets/Wegmans/Cheese night.jpg",
       "dialog": "You run up to the figure and find George. He explains he left his phone at the cheese counter. You tell him theres a monster in the store. He believes you and says there's and emergency door by the produce section.",
       "choices": [
         "Go with him to produce",
@@ -294,7 +297,7 @@
     },
     {
       "name": "waste",
-      "background": "",
+      "background": "rc/Assets/Wegmans/Produce night.jpg",
       "dialog": "She takes you to the produce section and explains how many fruit and vegetables go to waste at wegmans and how she has been trying to find a way to stop this by engineering food that never goes bad.",
       "choices": [
         "Remind her that Wegmans is committed to maintaining a zero waste policy so that the food doesn't isn't wasted and instead is given to those that need it most, used in wegmans prepared foods or if they're totally unusable are sent to farmers to feed livestock, anaerobic digestion to be turned into energy, or for composting."
@@ -302,7 +305,7 @@
     },
     {
       "name": "george attack",
-      "background": "",
+      "background": "rc/Assets/Wegmans/Produce night.jpg",
       "dialog": "You and George run to produce, the monster is there and corners you two. It attacks George",
       "choices": [
         "'Sorry George!' (Run away)'",
@@ -311,13 +314,13 @@
     },
     {
       "name": "end a",
-      "background": "",
+      "background": "rc/Assets/Wegmans/Wegmans outside.jpg",
       "dialog": "You run away successfully",
       "choices": []
     },
     {
       "name": "finger snap",
-      "background": "",
+      "background": "rc/Assets/Wegmans/Produce night.jpg",
       "dialog": "Fanny angrily explains that wegmans could make so much more money with her fruit once she worked out the kinks. She gestures to the banana monster as it walk up behind you. \"You know too much\" she says. She snaps her fingers and you feel the banana close in on you",
       "choices": [
         "Talk sense to a banana"
@@ -325,7 +328,7 @@
     },
     {
       "name": "sad banana",
-      "background": "",
+      "background": "rc/Assets/Wegmans/Produce night.jpg",
       "dialog": "As the banana approaches you scream \"You don't have to do this!\" It pauses as you pick up a banana from the display nearby, \"This was you, but she made you into this monster!\" The banana looks sadly at its past form as Fanny screams at it to attack. \"I can help you, but we need to stop her!\" The banana suddenly comes at you",
       "choices": [
         "Punch that freak in his freaky face",
@@ -334,7 +337,7 @@
     },
     {
       "name": "end 2",
-      "background": "",
+      "background": "rc/Assets/Wegmans/Produce night.jpg",
       "dialog": "The banana goes in for a hug. Your uncomfortable but alive.",
       "choices": []
     }
