@@ -180,18 +180,13 @@
     "name": "left",
     "background": "leftpath.png",
     "dialog": "You go left.  After about 2 minutes of walking, you reach the end of the cave, and are met with the bright sunny sky.  \nYou step out and see that you are on a different island now, the tunnel must connect islands",
-    "choices": [
-      "Look around the island",
-      "Go to water"
-    ]
+    "choices": []
     },
     {
       "name": "right",
       "background": "rightpath.png",
       "dialog": "You go right.  You hear a screech in the darkness that bounces around the cave walls.  \nYou shiver and keep moving until the ground levels out.  You notice the trail comes to a large puddle.  You realize it's blood. Then you see a human skull a few feet away.  You hear deep, hindered breathing behind you.",
       "choices": [
-        "Turn around",
-        "Freeze",
         "Hit your head with the brick"
       ]
     },
@@ -328,7 +323,6 @@
       "dialog": "You resist the urge to hit yourself with the brick and pull yourself up the ledge and into the cave, \nthe brick gently illuminates the cave walls, showing a damp interior",
       "choices": [
         "Walk along the wall"
-
       ]
     }
   ],
