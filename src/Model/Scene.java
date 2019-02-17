@@ -2,13 +2,27 @@ package Model;
 
 import java.util.ArrayList;
 
+/**
+ * The Scene class represents the multiple situations in which a players could be placed
+ * @author: Alec Mahoney
+ */
 public class Scene {
+
+    /**
+     * The name of this scene
+     */
     private String sceneName;
-    // name of the background file
+    /**
+     * Name of the background file
+     */
     private String background;
-    // the available choices
+    /**
+     * The available choices in this scene
+     */
     private ArrayList<Choice> choices;
-    // opening dialogue;
+    /**
+     * Opening dialogue of the scene
+     */
     private String dialogue;
 
     /**
@@ -57,18 +71,6 @@ public class Scene {
         return choices;
     }
 
-    /*
-    public String printScene() {
-        return this.sceneName +
-                " \nInitial Dialogue: " +
-                this.dialogue;
-    }
-    */
-
-    /**
-     * convert the object Scene into a string format
-     * @return scene name, background, dialogue, and choices
-     */
     @Override
     public String toString() {
         return this.sceneName +

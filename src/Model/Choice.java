@@ -2,15 +2,26 @@ package Model;
 
 import java.util.ArrayList;
 
+/**
+ * The Choice class represents a possible option in a given scene
+ * @author: Alex Scholeno
+ */
 public class Choice {
-    //the options the player has to choose from
+
+    /**
+     * The text to be displayed to the user for this choice
+     */
     private String choice;
 
-    //the starting scene for the player
-    private String currentscene;
+    /**
+     * The name of the scene where this choice appears
+     */
+    private String currentScene;
 
-    //the ending scene, that the player goes to after choosing option
-    private String resultscene;
+    /**
+     * The scene the player goes upon choosing this option
+     */
+    private String resultScene;
 
     /**
      * This is the constructor for a Choice
@@ -20,8 +31,8 @@ public class Choice {
      */
     public Choice(String choice, String currentscene, String resultscene){
         this.choice = choice;
-        this.currentscene = currentscene;
-        this.resultscene = resultscene;
+        this.currentScene = currentscene;
+        this.resultScene = resultscene;
     }
 
     /**
@@ -37,7 +48,7 @@ public class Choice {
      * @return this.start
      */
     public String getStart(){
-        return this.currentscene;
+        return this.currentScene;
     }
 
     /**
@@ -45,17 +56,12 @@ public class Choice {
      * @return this.end
      */
     public String getEnd(){
-        return this.resultscene;
+        return this.resultScene;
     }
 
-    /**
-     * This method override toString(), having it return the
-     * choice as a string
-     * @return
-     */
     @Override
     public String toString(){
-       return "Choice{ option: '" + this.getChoice() + "'\nStartscene: Scene{" + currentscene + "}\nEndscene: Scene{" + resultscene + "} }";
+       return "Choice{ option: '" + this.getChoice() + "'\nStartscene: Scene{" + currentScene + "}\nEndscene: Scene{" + resultScene + "} }";
     }
 
     /**
