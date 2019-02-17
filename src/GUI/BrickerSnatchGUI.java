@@ -8,14 +8,14 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
+import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
 import javafx.scene.layout.*;
-
 import java.util.ArrayList;
 
 
 public class BrickerSnatchGUI extends Application {
-    private Label dialogue;
+    private Text dialogue;
     private ArrayList<Button> buttonChoices;
     private ImageView background;
     private Stage stage;
@@ -34,7 +34,10 @@ public class BrickerSnatchGUI extends Application {
 
         this.stage = stage;
         BorderPane layout = new BorderPane();
-        dialogue = new Label(dialogueString);
+        dialogue = new Text(dialogueString);
+        dialogue.setStyle("-fx-background-color: red;" +
+                "-fx-min-width: 1200;");
+        dialogue.setTextAlignment(TextAlignment.CENTER);
         layout.setCenter(dialogue);
 
         boxyBoi = new VBox();
@@ -48,8 +51,16 @@ public class BrickerSnatchGUI extends Application {
         }
         layout.setBottom(boxyBoi);
 
+        //Image img = new Image("Assets/Alex.jpg");
+        //background = new ImageView(img);
+        layout.setMinSize(1200, 675);
+        layout.setStyle("-fx-background-image: url(" + "Assets/Alex.jpg" + ");" +
+                "-fx-background-position: center center;" +
+                "-fx-background-size: 1200 675");
+
         Scene sc = new Scene(layout);
         stage.setScene(sc);
+        stage.setResizable(false);
         stage.show();
     }
 
